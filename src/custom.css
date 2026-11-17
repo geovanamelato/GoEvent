@@ -1,0 +1,92 @@
+body {
+  padding-top: 90px;
+  padding-bottom: 40px;
+}
+.bs-component {
+  position: relative;
+}
+
+.admin-dashboard .card-body { padding: 1.25rem; }
+.admin-stat { color: inherit; border-color: #e7eaf0; transition: transform .18s ease, box-shadow .18s ease; }
+.admin-stat:hover { transform: translateY(-2px); box-shadow: 0 .5rem 1.5rem #1e293b14; }
+.admin-stat .card-body { display: flex; flex-direction: column; gap: .55rem; }
+.admin-stat strong { font-size: 1.35rem; color: #273a8a; }
+.admin-stat span { font-size: .8rem; color: #667085; }
+.admin-user-form { padding: 1rem; border: 1px solid #e6e9ef; border-radius: .75rem; background: #fbfcfe; }
+.event-grid .event-card { overflow: hidden; border: 1px solid #e8ebf1; border-radius: .85rem; box-shadow: 0 .35rem 1rem #1e293b0b; }
+.event-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 1rem; }
+.event-form-grid .form-group:has(textarea), .event-form-grid .event-form-actions { grid-column: 1 / -1; }
+.event-form-grid .form-group { margin-bottom: .65rem; }
+.event-form-actions { justify-content: flex-end; }
+.event-card-image, .event-card-art { width: 100%; height: 180px; object-fit: cover; }
+.event-card-art { display: flex; flex-direction: column; justify-content: space-between; padding: 1.1rem; color: white; background: radial-gradient(circle at 80% 15%, #fdc56b 0, transparent 32%), linear-gradient(135deg,#273a8a,#7657b5 58%,#ee7969); }
+.event-card-art span { font-size: .7rem; letter-spacing: .18em; opacity: .85; }
+.event-card-art strong { font-size: 1.3rem; text-shadow: 0 1px 8px #0004; }
+.event-modal-backdrop { position: fixed; inset: 0; z-index: 1060; display: flex; align-items: center; justify-content: center; overflow-y: auto; padding: 1rem; background: #17203399; }
+.event-modal-backdrop .modal-dialog { width: min(100%, 900px); max-width: 900px; margin: auto; }
+@media (max-width: 575.98px) { .event-card-image, .event-card-art { height: 150px; } .event-form-grid { grid-template-columns: 1fr; } .event-form-grid .form-group:has(textarea), .event-form-grid .event-form-actions { grid-column: 1; } }
+
+/* mensagens do toastr (o Bootstrap também tem uma classe "toast" e deixa tudo branco) */
+#toast-container > .toast-success {
+  background-color: #51a351;
+}
+#toast-container > .toast-error {
+  background-color: #bd362f;
+}
+#toast-container > .toast-warning {
+  background-color: #f89406;
+}
+#toast-container > .toast-info {
+  background-color: #2f96b4;
+}
+
+/* ---------- visual do menu e da página inicial (cores fixas para ficar sempre legível) ---------- */
+.goevent-navbar {
+  background: linear-gradient(135deg, #273a8a, #5a47a8);
+  box-shadow: 0 2px 10px #0003;
+}
+.goevent-navbar .navbar-brand,
+.goevent-navbar .nav-link {
+  color: #fff;
+}
+.goevent-navbar .nav-link { opacity: 0.85; }
+.goevent-navbar .nav-link:hover,
+.goevent-navbar .nav-link.active { opacity: 1; color: #fff; }
+.goevent-navbar .nav-link.active { border-bottom: 2px solid #fdc56b; }
+
+.goevent-hero {
+  padding: 3rem 1.5rem;
+  border-radius: 0.85rem;
+  color: #fff;
+  text-align: center;
+  background: radial-gradient(circle at 85% 15%, #fdc56b55 0, transparent 35%),
+    linear-gradient(135deg, #273a8a, #7657b5 60%, #ee7969);
+}
+.goevent-hero h1,
+.goevent-hero p { color: #fff; }
+
+/* botões que aparecem sobre o fundo colorido (menu e página inicial) */
+.btn-go-claro {
+  background: #fff;
+  border: 2px solid #fff;
+  color: #273a8a;
+  font-weight: 600;
+}
+.btn-go-claro:hover { background: #eef0fb; border-color: #eef0fb; color: #1b2a6b; }
+.btn-go-contorno {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 600;
+}
+.btn-go-contorno:hover { background: #fff; color: #273a8a; }
+
+/* ---------- janela de detalhes do evento ---------- */
+.event-modal-backdrop .modal-content { background: #fff; color: #212529; border: 0; border-radius: 0.85rem; }
+.event-modal-backdrop .modal-body { padding: 1.5rem 2rem; font-size: 1.05rem; }
+.event-modal-backdrop .modal-title { font-size: 1.6rem; }
+.event-modal-backdrop .modal-header, .event-modal-backdrop .modal-footer { padding: 1.25rem 2rem; }
+.event-modal-backdrop .modal-title { color: #273a8a; font-weight: 700; }
+.event-modal-backdrop dt { color: #667085; font-weight: 600; }
+.event-modal-backdrop dd { color: #212529; }
+.event-modal-backdrop .modal-footer { justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
